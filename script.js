@@ -12,7 +12,7 @@ form.addEventListener("submit", async function(event) {
 
 async function fetchGeographicalData(ip) {
   try {
-    var res = await fetch(`https://www.geoplugin.net/json.gp?ip=${ip}`);
+    var res = await fetch(`http://www.geoplugin.net/json.gp?ip=${ip}`);
     if (!res.ok) {
       throw new Error('Failed to fetch data');
     }
@@ -29,6 +29,6 @@ async function fetchGeographicalData(ip) {
     `;
     geographicalData.style.display = "block";
   } catch (error) {
-    console.error('Error:', error.message);
+    console.log("error")
   }
 }
